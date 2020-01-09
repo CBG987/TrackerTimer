@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"/>
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:id="@+id/stopp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stopp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="100dp"/>
+
+    <Button
+        android:id="@+id/excelimport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Importere fra Excel"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="200dp"/>
+
+    <Button
+        android:id="@+id/addperson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/add_intro"/>
+
+    <Button
+        android:id="@+id/results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/results"
+        android:layout_marginStart="150dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="Fellesstart"
+        android:layout_marginStart="20dp"
+        android:width="70dp"/>
+
+    <ToggleButton
+        android:id="@+id/togglefelles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:layout_marginStart="10dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="Intervallstart"
+        android:layout_marginStart="143dp"
+        android:width="85dp"/>
+
+    <ToggleButton
+        android:id="@+id/toggleintervall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:layout_marginStart="140dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="Jaktstart"
+        android:layout_marginStart="280dp"
+        android:width="70dp"/>
+
+    <ToggleButton
+        android:id="@+id/togglejakt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:layout_marginStart="270dp"/>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:fillViewport="true">
+        <TableLayout
+            android:id="@+id/tablelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2,3">
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>

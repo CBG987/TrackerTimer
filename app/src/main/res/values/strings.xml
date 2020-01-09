@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">TrackerTimer</string>
+    <string name="start">Start</string>
+    <string name="stopp">Stopp</string>
+
+    <string name="add_intro">Legg til person</string>
+    <string name="name">Navn: </string>
+    <string name="age">Fødselsdato: </string>
+    <string name="bib">Startnummer: </string>
+    <string name="add">Legg til</string>
+    <string name="cancel">Avbryt</string>
+    <string name="back">Tilbake</string>
+    <string name="results">Resultat</string>
+    <string name="send">Send til Java</string>
+
+    <string-array name="montharray">
+        <item>Januar</item>
+        <item>Februar</item>
+        <item>Mars</item>
+        <item>April</item>
+        <item>Mai</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>August</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Desember</item>
+    </string-array>
+</resources>
