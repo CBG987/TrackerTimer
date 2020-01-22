@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         isjaktstart = false;
 
         try{
-            socket = IO.socket("http://85.166.159.139:3000");
+            socket = IO.socket(getResources().getString(R.string.ipaddress));
             socket.connect();
             socket.emit("message", "an android unit joined");
             Toast.makeText(this, "joined", Toast.LENGTH_LONG).show();
