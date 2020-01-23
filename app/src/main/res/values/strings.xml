@@ -28,6 +28,7 @@
         <item>Desember</item>
     </string-array>
 
-    <string name="ipaddress">http://10.0.0.1:3000</string>
+    <!--<string name="ipaddress">http://10.0.0.1:3000</string>-->
     <!--<string name="ipaddress">http://85.166.159.139:3000</string>-->
+    <string name="ipaddress">http://88.90.37.144:3000</string>
 </resources>
