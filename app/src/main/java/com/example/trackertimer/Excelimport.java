@@ -171,15 +171,17 @@ public class Excelimport extends AppCompatActivity {
                 int a2 = (int)a1;
                 String a = a2+"";
                 String b = columns[1];
-                String[] ca = columns[2].split("/");
-                String c;
+                //String[] ca = columns[2].split("/");
+                String c = columns[2];
                 String d = columns[3];
-                if (Integer.parseInt(ca[2])<40){
+                ////////////////////////////////
+                /*if (Integer.parseInt(ca[2])<40){
                     c = ca[1]+"-"+ca[0]+"-20"+ca[2];
                 }else {
                     c = ca[1]+"-"+ca[0]+"-19"+ca[2];
-                }
+                }*/
 
+                // b = navn, c = klasse, a = startnummer, d = starttid
                 String cellInfo = b+"//"+c+"//"+a+"//"+d;
                 if(theString == ""){
                     theString = cellInfo;

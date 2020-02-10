@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.NetworkOnMainThreadException;
+import android.os.PersistableBundle;
 import android.os.SystemClock;
 import android.util.Log;
 import android.view.Menu;
@@ -210,6 +211,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.topmenu, menu);
@@ -309,15 +316,16 @@ public class MainActivity extends AppCompatActivity {
                     String sluttsluttid = String.format("%02d:%02d:%02d", hours, minutes, seconds);
                     Log.d("MainActivity: ", "AddPerson:_ChroData: " + sluttid);
                     Log.d("MainActivity: ", "AddPerson:_ChroData: " + sluttsluttid);
+                    Log.d("MainActivity: ", "AddPerson:_ChroData: " + chronometer.getText().toString());
                     stopTimes.add(sluttsluttid);
                 }else {
                     stopTimes.add(chronometer.getText().toString());
                 }
                 navn.add(newT[0]); fødselsdato.add(newT[1]);
-                alder.add(getAlder(newT[1]));
+                //alder.add(getAlder(newT[1]));
                 startnr.add(Integer.parseInt(newT[2]));
                 int sis = navn.size()-1;
-                String sendServer = navn.get(sis)+"//"+startnr.get(sis)+"//"+fødselsdato.get(sis)+"//"+alder.get(sis)+"//"+stopTimes.get(sis);
+                String sendServer = navn.get(sis)+"//"+startnr.get(sis)+"//"+fødselsdato.get(sis)+"//"+stopTimes.get(sis);
                 socket.emit("result", sendServer);
                 layout.removeView(rows1);
             }
@@ -352,6 +360,8 @@ public class MainActivity extends AppCompatActivity {
     public int convertCronToInt(Chronometer chro){
         //Tiden skal være 00:00:00 == hh:mm:ss
         String chroTime = chro.getText().toString();
+        int elapsedMillis = (int) (SystemClock.elapsedRealtime() - chro.getBase());
+        Log.d("MainActivity: ", "convertCronToInt:_ElapsedTime: " + elapsedMillis);
         Log.d("MainActivity: ", "convertCronToInt:_ChroData: " + chroTime);
         String[] a = chroTime.split(":");
         int newTime = 0;
